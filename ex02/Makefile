@@ -6,15 +6,15 @@
 #    By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 11:20:39 by yingzhan          #+#    #+#              #
-#    Updated: 2025/11/19 19:03:31 by yingzhan         ###   ########.fr        #
+#    Updated: 2025/11/20 11:29:38 by yingzhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scavtrap
+NAME = fragtrap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

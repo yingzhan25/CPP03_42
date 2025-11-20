@@ -6,41 +6,41 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:26 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/19 18:59:44 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/20 11:33:19 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
 
 int	main(void)
 {
 	std::cout << "\033[32m" << "=======Derived: Constructors and operator assignment========" << "\033[0m" << std::endl;
 
-	ScavTrap	ScavA("Guard1");
-	ScavTrap	ScavB(ScavA);
-	ScavTrap	ScavC;
-	ClapTrap*	ScavD = new ScavTrap("Guard2");
+	FragTrap	FragA("Robot1");
+	FragTrap	FragB(FragA);
+	FragTrap	FragC;
+	ClapTrap*	FragD = new FragTrap("Robot2");
 
-	ScavC = ScavA;
-	ScavA.displayInfo();
-	ScavB.displayInfo();
-	ScavC.displayInfo();
-	ScavD->displayInfo();
+	FragC = FragA;
+	FragA.displayInfo();
+	FragB.displayInfo();
+	FragC.displayInfo();
+	FragD->displayInfo();
 
 	std::cout << "\033[32m" << "====================Derived: Normal case====================" << "\033[0m" << std::endl;
-	ScavA.attack("Enemy1");
-	ScavA.takeDamage(20);
-	ScavA.beRepaired(15);
-	ScavA.guardGate();
-	ScavA.displayInfo();
+	FragA.attack("Enemy1");
+	FragA.takeDamage(40);
+	FragA.beRepaired(30);
+	FragA.highFivesGuys();
+	FragA.displayInfo();
 
 	std::cout << "\033[32m" << "====================Derived: Polymorphism====================" << "\033[0m" << std::endl;
-	ScavD->attack("Enemy2");
-	ScavD->takeDamage(11);
-	ScavD->beRepaired(3);
-	ScavD->displayInfo();
-	delete ScavD;
+	FragD->attack("Enemy2");
+	FragD->takeDamage(60);
+	FragD->beRepaired(55);
+	FragD->displayInfo();
+	delete FragD;
 
 	std::cout << "\033[32m" << "==========================Destructor==========================" << "\033[0m" << std::endl;
 	return (0);
