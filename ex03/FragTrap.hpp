@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/18 16:50:05 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/20 15:23:11 by yingzhan         ###   ########.fr       */
+/*   Created: 2025/11/20 11:15:10 by yingzhan          #+#    #+#             */
+/*   Updated: 2025/11/20 15:21:43 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-#define SCAVTRAP_H
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-//virtual functions because not know base or derived will be called
-class ScavTrap : public ClapTrap
+#include "ClapTrap.hpp"
+//virtual inheritance to avoid inheriting two bases
+class FragTrap : virtual public ClapTrap
 {
 	public:
-		ScavTrap();
-		ScavTrap(const std::string name);
-		ScavTrap(const ScavTrap& other);
-		ScavTrap&	operator=(const ScavTrap& other);
-		virtual	~ScavTrap();
+		FragTrap();
+		FragTrap(const std::string name);
+		FragTrap(const FragTrap& other);
+		FragTrap&	operator=(const FragTrap& other);
+		virtual	~FragTrap();
 
-		virtual void	attack(const std::string& target);
-		void	guardGate(void);
+		void	highFivesGuys(void);
 };
 
 #endif

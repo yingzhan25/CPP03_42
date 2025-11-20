@@ -6,7 +6,7 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:50:05 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/20 15:23:11 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:22:11 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #define SCAVTRAP_H
 #include "ClapTrap.hpp"
 
-//virtual functions because not know base or derived will be called
-class ScavTrap : public ClapTrap
+//virtual inheritance to avoid inheriting two bases
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap();

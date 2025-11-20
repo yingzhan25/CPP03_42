@@ -6,7 +6,7 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:19:51 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/20 15:25:48 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/18 16:46:31 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 class ClapTrap
 {
-	//Private but open to derived classes
 	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;
